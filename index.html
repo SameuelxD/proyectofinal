@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Reporte Incidencias</title>
+</head>
+<body>
+    <div class="container-main">
+        <div class="gov">
+            <a href="#"><img src="https://www.uts.edu.co/sitio/wp-content/uploads/2019/10/logo-gov-co.png" alt="gov.com"></a>
+        </div>
+        <nav class="navbar">
+            <div class="mobile">
+                <div class="header">    
+                    <a href="#" class="logo"><img src="https://www.uts.edu.co/sitio/wp-content/uploads/2019/10/Logo-UTS-1.png" alt="uts"></a>
+                    <div class="more"><button id="Bmore"><span class="material-symbols-outlined">
+                    Menu</span></button></div>
+                </div>
+                <div id="links" class="links">
+                    <a href="#">Services</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Search</a>
+                    <a href="#">Sing Up</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+            <div class="desktop">
+                <a href="#" class="logo"><img src="https://www.uts.edu.co/sitio/wp-content/uploads/2019/10/Logo-UTS-1.png" alt="uts"></a>
+                <div class="primary">
+                    <a href="#">Services</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="secundary full">
+                    <a href="#">Search</a>
+                    <a href="#">Sing Up</a>
+                    <a href="#">Login</a>
+                </div>
+                <div class="secundary mini">
+                    <a href="#" class="more">More</a>
+                    <div class="submenu">
+                        <a href="#">Search</a>
+                        <a href="#">Sing Up</a>
+                        <a href="#">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <script>
+            const Bmore= document.querySelector(`#Bmore`);
+            const links= document.querySelector(`#links`);
+            Bmore.addEventListener(`click`, (e) => {
+               links.classList.toggle(`collapsed`);
+            } )
+        </script>
+        <div class="principal">
+            <h1>Reporte de Incidencias</h1>
+            <img src="https://w7.pngwing.com/pngs/146/18/png-transparent-preventive-maintenance-predictive-maintenance-computer-icons-planned-maintenance-maintrance-logo-black-maintenance-thumbnail.png" alt="reporte">
+        </div>
+        <div class="reporte">
+            <form class="formulario">
+                <label>Nombres: </label>
+                <input type="text" placeholder="Nombres">
+                <label>Apellidos: </label>
+                <input type="text" placeholder="Apellidos">
+                <label>Numero de Cedula: </label>
+                <input type="number" placeholder="Identificacion">
+
+            </form>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

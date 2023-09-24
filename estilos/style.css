@@ -1,0 +1,152 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container-main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.collapsed {
+    display: none;
+}
+.gov{
+    grid-column: span 2;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.80%;
+    width: 100%;
+}
+.gov a{
+    width: 5%;
+}
+.gov a img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.navbar {
+    grid-column: span 2;
+    background: #000;
+    color: #fff;
+    width: 100%;
+}
+.navbar .mobile {
+    display: none;
+}
+.navbar .mobile .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar .mobile .header .more button {
+    border: none;
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+}
+.navbar .logo{
+    width: 12%;
+    height: auto;
+}
+.navbar .logo img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;
+}
+.navbar a:hover {
+    color: #000;
+    background: rgb(0,195,255);
+}
+.navbar .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.navbar .desktop .primary{
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navbar .desktop .secundary{
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.navbar .desktop .secundary.mini {
+    display: none;
+}
+.container-main .principal{
+    display: grid;
+    grid-column: span 2;
+    place-items: center;
+}
+.container-main .reporte{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+.container-main .reporte .formulario{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width: 900px) {
+    .navbar .logo {
+        min-width: 100px;
+    }
+    .navbar .secundary.full {
+        display: none;
+    }
+    .navbar .secundary.mini {
+        display: block !important;
+    }
+    .navbar .secundary.mini .submenu {
+        position: absolute;
+        display: none;
+        background: #000;
+        width: 200px;
+        right: 0;
+    }
+    .navbar .secundary.mini:hover .submenu {
+        display: block;
+    }   
+}
+@media screen and (max-width:500px) {
+    .navbar .desktop {
+        display: none;
+    }
+    .navbar .mobile {
+        display: block;
+    }
+
+    
+}
